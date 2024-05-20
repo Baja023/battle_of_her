@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Kanban Board</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>To Do</th>
+            <th>In Progress</th>
+            <th>Done</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td id="to-do"></td>
+            <td id="in-progress"></td>
+            <td id="done"></td>
+        </tr>
+    </tbody>
+</table>
+
+<script>
+    // Функция для загрузки JSON файла
+    async function loadJSON(url) {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+    }
+
+    // Функция для рендеринга задач в колонке
+    function renderTasks(columnId, tasks) {
+        const column = document.getElementById(columnId);
+        tasks.forEach(task => {
+            const taskElement = document.createElement('div');
+            taskElement.innerHTML = `<strong>${task.task}</strong><br>Description: ${task.description}<br>Priority: ${task.priority}<br><br>`;
+            column.appendChild(taskElement);
+        });
+    }
+
+    // Основная функция для рендеринга Kanban доски
+    async function renderKanbanBoard() {
+        const url = 'kanban.json';  // Путь к вашему JSON файлу
+        const kanbanBoard = await loadJSON(url);
+
+        renderTasks('to-do', kanbanBoard['Kanban Board']['To Do']);
+        renderTasks('in-progress', kanbanBoard['Kanban Board']['In Progress']);
+        renderTasks('done', kanbanBoard['Kanban Board']['Done']);
+    }
+
+    // Вызов функции для рендеринга Kanban доски при загрузке страницы
+    renderKanbanBoard();
+</script>
+
+</body>
+</html>
