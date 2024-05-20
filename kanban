@@ -1,0 +1,5 @@
+{
+  "prompt": "A Kanban board for the project 'Battle of Heroes'. The board is divided into three columns labeled 'To Do', 'In Progress', and 'Done'. The 'To Do' column contains tasks such as 'Create Hero class', 'Create Game class', 'Test Hero class', 'Test Game class', and 'Write documentation'. The 'In Progress' column contains tasks like 'Creating Hero class' and 'Creating Game class'. The 'Done' column is empty.",
+  "size": "1792x1024",
+  "n": 1
+}
