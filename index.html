@@ -60,7 +60,7 @@
 
     // Основная функция для рендеринга Kanban доски
     async function renderKanbanBoard() {
-        const url = 'kanban.json';  // Путь к вашему JSON файлу
+        const url = 'kanban';  // Путь к вашему JSON файлу
         const kanbanBoard = await loadJSON(url);
 
         renderTasks('to-do', kanbanBoard['Kanban Board']['To Do']);
