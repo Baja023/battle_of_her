@@ -1,5 +1,44 @@
 {
-  "prompt": "A Kanban board for the project 'Battle of Heroes'. The board is divided into three columns labeled 'To Do', 'In Progress', and 'Done'. The 'To Do' column contains tasks such as 'Create Hero class', 'Create Game class', 'Test Hero class', 'Test Game class', and 'Write documentation'. The 'In Progress' column contains tasks like 'Creating Hero class' and 'Creating Game class'. The 'Done' column is empty.",
-  "size": "1792x1024",
-  "n": 1
+  "Kanban Board": {
+    "To Do": [
+      {
+        "task": "Создать класс Hero",
+        "description": "Разработать класс для создания героя с атрибутами и методами.",
+        "priority": "High"
+      },
+      {
+        "task": "Создать класс Game",
+        "description": "Разработать класс для управления игровым процессом.",
+        "priority": "High"
+      },
+      {
+        "task": "Тестирование класса Hero",
+        "description": "Провести тестирование всех методов класса Hero.",
+        "priority": "Medium"
+      },
+      {
+        "task": "Тестирование класса Game",
+        "description": "Провести тестирование всех методов класса Game.",
+        "priority": "Medium"
+      },
+      {
+        "task": "Написание документации",
+        "description": "Написать документацию для всех классов и методов.",
+        "priority": "Low"
+      }
+    ],
+    "In Progress": [
+      {
+        "task": "Создание класса Hero",
+        "description": "Разработка класса для создания героя с атрибутами и методами.",
+        "priority": "High"
+      },
+      {
+        "task": "Создание класса Game",
+        "description": "Разработка класса для управления игровым процессом.",
+        "priority": "High"
+      }
+    ],
+    "Done": []
+  }
 }
